@@ -26,9 +26,6 @@
 body {
   font-size: 12px;
   font-family: "Meiryo";
-  /*font-family: 'Hirakaku';*/
-  background-color: #4fbad3;
-
 }
  ul, ul li {
   padding: 0;
@@ -46,73 +43,64 @@ body {
 
 .header-container {
   background-color: #ffffff;
-  height: 114px;
-  position: relative;
-  border-bottom: 4px solid #7fe2ee;
-
 }
 .wrapper {
   width: 1200px;
   background-color: #fff;
   margin: 0 auto;
   font-family: "Meiryo";
+  display: flex;
 }
-.wrapper h1 {
-  padding-top: 36px;
-  float: left;
+.wrapper h1.logo {
+  padding: 39px 0 39px;
+  line-height: 10px;
+  flex-basis: 500px;
+  margin-right: 8px;
 }
-.wrapper h1 img {
-  clear: left;
+.wrapper h1 a {
+  display: block;
 }
-.wrapper #header-right {
-  float: right;
-  padding-top: 30px;
+.wrapper div.header-right {
+  padding: 30px 0;
+  flex-basis: 700px;
 }
-.wrapper #header-right .header-left {
-  float: left;
-}
-.wrapper #header-right #form {
+
+.wrapper .header-right .form {
   display: inline-block;
   position: relative;
   margin-right: 9px;
   float: left;
 }
-.wrapper #header-right input{
+.wrapper .header-right input{
   width: 310px;
   height: 50px;
   border: 1px solid #e6e7e7;
   background-color: #fafdff;
 }
-.wrapper #header-right input::placeholder {
+.wrapper .header-right input::placeholder {
   color: #8acde0;
 }
-.wrapper #header-right input.search {
+.wrapper .header-right input.search {
   padding: 0px 68px 0px 18px;
 }
-.wrapper #header-right .search-btn {
+.wrapper .header-right .search-btn {
   background: url(../images/search-btn.png) no-repeat center;
   background-color: #50bad4;
   width: 53px;
   height: 48px;
+  position: absolute;
   top: 1px;
   right: 1px;
-  position: absolute;
   border: none;
 }
-nav {
-  float: right;
-}
-nav ul {
-  list-style-type: none;
-}
-nav ul li {
+
+.wrapper .header-right ul li {
   width: 180px;
   margin-right: 8px;
-  float: left;
   display: inline-block;
 
 }
-nav ul li a {
+.wrapper .header-right ul li a {
   border-bottom: 2px solid;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   padding: 12px 0px 12px 0;
@@ -122,16 +110,16 @@ nav ul li a {
   font-size: 16px;
   text-align: center;
 }
-nav ul li.sign-up a:hover {
+.wrapper .header-right ul li.sign-up a:hover {
   background-color: #659cf7;
 }
-nav ul li.sign-in a:hover {
+.wrapper .header-right ul li.sign-in a:hover {
   background-color: #ed3939;
 }
-nav ul li:last-child {
+.wrapper .header-right ul li.sign-in {
    margin-right: 0px;
 }
-nav ul li:last-child a{
+.wrapper .header-right ul li:last-child a{
   background-color: #d63232;
 }
 
@@ -145,10 +133,11 @@ nav ul li:last-child a{
   margin: 0 auto;
   display: flex;
   padding-bottom: 33px;
+  border-top: 4px solid #7fe2ee;
 
 }
 .main {
-  width: 1048px;
+  width: 1000px;
   margin: 0 auto;
 }
 .main .category-left{
@@ -156,7 +145,6 @@ nav ul li:last-child a{
   color: #d2d2d2;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 48px;
 }
 .main .category-left .category-left-float {
   float: left;
@@ -172,7 +160,7 @@ nav ul li:last-child a{
   color: inherit;
   word-break: break-all;
 }
-.main .category-left .cate li.active a {
+.main .category-left .cate li a:hover {
   color: #a2e6f0;
 }
 
@@ -203,10 +191,10 @@ section div h2 {
   font-family: "Hirakaku";
   line-height: 18px;
 }
-section div.cate-no span  {
+/*section div.cate-no span  {
   border-left: 4px solid #9eadff;
   padding-left: 10px;
-}
+}*/
 /*section .cate-no h2::before {
   content: "|";
   color: #9eadff;
@@ -222,18 +210,24 @@ section ul.all-news  {
 section ul.all-news li  {
   display: flex;
   width: 678px;
-  padding: 20px 22px 16px 16px;
+  padding: 20px 16px;
   border-bottom: 1px solid #eeeeee;
-  position: relative;
 }
 section ul.all-news li div.news-img {
   flex-basis: 240px;
 }
+section ul li div.news-img a {
+  display: block;
+  position: relative;
+}
+section ul li div.news-img a img {
+  vertical-align: bottom;
+}
 section ul li div.news-img a span {
   color: #50bad4;
   position: absolute;
-  top: 11px;
-  left: 17px;
+  top: -9px;
+  left: 1px;
   font-size: 50px;
 }
 section ul li div.news-img a span::after {
@@ -251,7 +245,7 @@ section ul.all-news  li div.news-content {
   flex-basis: 400px;
 }
 
-section ul.all-news  li div.news-content div a  {
+section ul.all-news  li div.news-content div a.cate-view  {
   font-size: 11px;
   padding: 2.5px 5.5px;
   color: #ffffff;
@@ -264,27 +258,29 @@ section ul.all-news  li div.news-content .news-view {
   color: #969696;
   font-size: 13px;
   text-align: right;
-  float: right;
   font-weight: bold;
+}
+section ul.all-news  li div.news-content .news-status {
+  position: relative;
+}
+section ul.all-news  li div.news-content .news-status .news-view {
+  position: absolute;
+  right: 0;
+  top: 0px;
 }
 section ul.all-news  li .news-content div h3 {
   padding: 10px 0 7px 0;
   font-family: "Hirakaku";
-  letter-spacing: -1px;
   margin-left: 0;
 }
 section ul.all-news  li .news-content div h3 a {
   font-size: 20px;
   color: #333333;
 }
-section ul.all-news  li .news-content div p {
-}
-section ul.all-news  li .news-content div p a  {
+section ul.all-news  li .news-content div p  {
   font-size: 14px;
   color: #333333;
   font-family: inherit;
-  padding-left: 0;
-  margin-left: 0;
 }
 section ul.all-news  li .news-content div div.news-footer {
   display: inline-block;
@@ -297,10 +293,13 @@ section ul.all-news  li .news-content div div.news-date:after {
   color: #aaaaaa;
   padding: 0 15px 0 16px;
 }
-section ul.all-news  li .news-content div div.news-author {
+section ul.all-news  li .news-content div a.news-author {
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-color: #a3a3a3;
+  color: inherit;
+  font-weight: bold;
+
 }
 section ul.all-news  li div a.cate-no1 {
   background-color: #9eadff;
@@ -337,20 +336,20 @@ section .center ul.pagination li a:hover {
   color: #505050;
 }
 section .center ul.pagination li:last-child a {
-  background-color: #fff;
+  background-color: #c8c8c8;
   position: relative;
 }
-section .center ul.pagination li:last-child a span {
+section .center ul.pagination li:last-child a img.btn-next {
   font-size: 30px;
   color: #c8c8c8;
   font-weight: bold;
   position: absolute;
-  top: -5px;
+  top: 8px;
   left: 12px;
 }
-section .center ul.pagination li:last-child a span:hover {
+section .center ul.pagination li:last-child a a.btn-next:hover {
   font-size: 30px;
-  background-color: : #c8c8c8;
+  background-color: #c8c8c8;
   font-weight: bold;
 }
 section .center ul.pagination a.active {
@@ -367,262 +366,270 @@ aside {
   flex-basis: 300px;
   background-color: #f8fcfe;
 }
-aside div.aside-1-content,
-aside div.aside-2-content {
+aside .ads {
+  display: block;
+}
+.aside-container {
   border: 1px solid #e6e6e6;
   background-color: #ffffff;
   margin-top: 20px;
 }
-aside div.aside-1-content div.cate-header,
-aside div.aside-2-content div.recommend {
-  font-size: 32px;
+.aside-container .aside-header {
   color: #646464;
   border-bottom: 1px solid #e6e6e6;
-  padding: 25px 0 26px 7px;
+  padding: 29px 0 29px 7px;
   line-height: 20px;
   position: relative;
 }
-aside div.aside-1-content div.cate-header div.cate-header-mr,
-aside div.aside-2-content div.recommend div.cate-header-mr {
+.aside-container .aside-header .aside-header-mr {
   word-break: break-all;
   margin-right: 55px;
 }
-aside div.aside-1-content div.cate-header span,
-aside div.aside-2-content div.recommend span {
+.aside-container .aside-header .aside-header-mr h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 30px;
+}
+.aside-container .aside-header .aside-header-mr span {
   font-size: 12px;
   font-family: "Meiryo";
   color: #646464;
+  line-height: 18px;
 }
-aside div.aside-1-content div.cate-header img, 
-aside div.aside-2-content div.recommend img {
+.aside-container .aside-header img {
   position: absolute;
-  top: 36px;
+  top: 35px;
   right: 17px;
-  bottom: 32px;
 }
-aside div.aside-1-content ul.aside-cate {
-  margin: 20px 9px 19px 9px;
+.aside-container .aside-body {
+  margin: 20px 9px;
 }
-aside div.aside-1-content ul.aside-cate li {
+
+/*======
+  aside category ======*/
+
+.aside-container .aside-category .aside-body .cate-body li {
   margin-bottom: 10px;
   display: block;
   border-bottom: 2px solid;
   border-bottom-color: rgba(0, 0, 0, 0.1);
   position: relative;
 }
-aside div.aside-1-content ul.aside-cate li a  {
-  padding: 18px 55px 16px 90px;
+.aside-container .aside-category .aside-body .cate-body li a {
   font-size: 16px;
   color: #fff;
   font-family: "Hirakaku";
   font-weight: bold;
-  display: block;
+  word-break: break-all;
+  display: flex;
+  align-items: center;
 }
-aside div.aside-1-content ul.aside-cate li a span  {
-  position: absolute;
-  top: -5px;
-  right: 11px;
-  font-size: 40px;
+.aside-container .aside-category .aside-body .cate-body li a p {
+  padding-left: 10px;
+  margin-right: 30px;
 }
-/*aside div.aside-1-content ul.aside-cate li a span::after {
-  content: ">";
-  color: #fff;
-  font-size: 18px;
-}*/
-aside div.aside-1-content ul.aside-cate li a img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.aside-container .aside-category .aside-body .cate-body li a img.btn-next {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 }
 
-aside div.aside-1-content ul li.category-no1 {
+.aside-container .aside-category .aside-body .cate-body li.cate1 {
   background-color: #0085cd;
 }
-aside div.aside-1-content ul li.category-no1:hover {
+.aside-container .aside-category .aside-body .cate-body li.cate:hover {
   background-color: #009df2;
 }
-aside div.aside-1-content ul li.category-no2 {
+.aside-container .aside-category .aside-body .cate-body li.cate2 {
   background-color: #47b8b2;
 }
-aside div.aside-1-content ul li.category-no2:hover {
+.aside-container .aside-category .aside-body .cate-body li.cate2:hover {
   background-color: #4dd7d6;
 }
-aside div.aside-1-content ul li.category-no3 {
+.aside-container .aside-category .aside-body .cate-body li.cate3 {
   background-color: #ea928e;
 }
-aside div.aside-1-content ul li.category-no3:hover {
+.aside-container .aside-category .aside-body .cate-body li.cate3:hover {
   background-color: #fa9a96;
 }
-aside div.aside-1-content ul li.category-no4 {
+.aside-container .aside-category .aside-body .cate-body li.cate4 {
   background-color: #c54646;
 }
-aside div.aside-1-content ul li.category-no4:hover {
+.aside-container .aside-category .aside-body .cate-body li.cate4:hover {
   background-color: #f55959;
 }
-aside div.aside-1-content ul li.category-no5 {
+.aside-container .aside-category .aside-body .cate-body li.cate5 {
   background-color: #eba622;
 }
-aside div.aside-1-content ul li.category-no5:hover {
+.aside-container .aside-category .aside-body .cate-body li.cate5:hover {
   background-color: #ffb72c;
 }
 
+/*======
+  aside recommend ====*/
 
-
-aside .aside-2 ul.aside-recommend{
-  padding: 0px 9px 19px 9px;
+.aside-container .aside-recommend .aside-body {
+  margin: 0 9px 19px 9px;
 }
-
-aside .aside-2 ul.aside-recommend li {
+.aside-container .aside-recommend .aside-body .recommend-body li {
   display: flex;
   width: 280px;
   padding: 13px 0 11px 0;
   border-bottom: 1px solid #eeeeee;
+  align-items: center;
 }
-aside .aside-2 ul li a {
+.aside-container .aside-recommend .aside-body .recommend-body li a {
   flex-basis: 100px;
-  /*cant fix with img so set height*/
-  height: 75px;
+  word-break: break-all;
 }
-
-aside .aside-2 ul li h6 {
+.aside-container .aside-recommend .aside-body .recommend-body li a img {
+  vertical-align: bottom;
+}
+.aside-container .aside-recommend .aside-body .recommend-body li h3  {
   flex-basis: 180px;
-  padding: 16px 0 0 15px;
+  padding-left: 15px;
+  align-self: center;
 }
-aside .aside-2 ul li h6 a {
-  font-size: 13px;
-  color: #585858;
-  font-family: "Meiryo";
-  font-weight: lighter;
+.aside-container .aside-recommend .aside-body .recommend-body li h3 a{
+ font-size: 13px;
+ line-height: 22px;
+ font-weight: normal;
+ color: #585858;
+font-family: "Meiryo";
 }
-aside .aside-2 ul li:first-child h6 a  {
+.aside-container .aside-recommend .aside-body .recommend-body li h3 a:hover {
   color: #4fbad3;
   text-decoration: underline;
   text-underline-position: under;
 }
-aside .aside-2 ul li:last-child  {
-  border: none;
+.aside-container .aside-recommend .aside-body .recommend-footer {
+  padding: 14px 0;
   position: relative;
 }
-aside .aside-2 ul li:last-child a  {
+.aside-container .aside-recommend .aside-body .recommend-footer a {
+  color: #585858;
+  font-family: "Meiryo";
+  display: block;
   font-size: 12px;
-  color: #6fc4d9;
-  text-decoration: underline;
-  text-underline-position: under;
   right: 0;
   position: absolute;
 }
-aside .aside-2 ul li:last-child a span {
-  font-size: 10px;
-  text-decoration: none;
+.aside-container .aside-recommend .aside-body .recommend-footer a:hover {
+  color: #4fbad3;
+  text-decoration: underline;
+  text-underline-position: under;
 }
-
-
-
+.aside-container .aside-recommend .aside-body .recommend-footer a span {
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  font-size: 10px;
+}
 
 
 /*==========
   FOOTER ========*/
 
-.footer-1  {
+footer .footer {
   background-color: #ebeff1;
   padding-bottom: 55px;
 }
-footer {
+footer .footer-container {
   width: 1200px;
   margin: 0 auto;
 }
-footer .footer-header {
-  padding: 36px 0 35px 0;
+.footer-container .footer-header {
+  padding: 36px 0;
 }
-footer .footer-body {
-  width: 1200px;
+.footer-container .footer-header a {
+  display: block;
+}
+.footer-container .footer-header a img {
+  vertical-align: bottom;
+}
+.footer-container .footer-body {
   display: flex;
   color: #757778;
 }
-footer .footer-body .footer-intro {
+.footer-container .footer-body .footer-intro {
   flex-basis: 425px;
   font-family: "Meiryo";
   margin-right: 58px;
 }
-footer .footer-body .footer-intro p  {
-  padding-top: 1px;
+.footer-container .footer-body .footer-intro {
   line-height: 20px;
+  padding-top: 2px;
+  font-size: 12px;
 }
-footer .footer-body .footer-intro a {
+.footer-container .footer-body .footer-intro a {
   color: #80c8db;
-  float: right;
   padding-top: 13px;
   font-weight: bold;
+  float: right;
 }
-footer .footer-body .footer-intro a span {
+.footer-container .footer-body .footer-intro a span {
   font-size: 13px;
 }
-
-footer .footer-body .footer-cate, 
-footer .footer-body .footer-tag {
-  flex-basis: 331px;
+.footer-container .footer-body .footer-category {
+  clear: both;
 }
-footer .footer-body h4 {
+.footer-container .footer-body .footer-category,
+.footer-container .footer-body .footer-tag {
+  flex-basis: 330px;
+}
+.footer-container .footer-body .footer-category p,
+.footer-container .footer-body .footer-tag p {
   font-size: 16px;
-  padding: 0 0 5px 16px;
-  font-family: "KozGoPr6N";
+  font-family: ""KozGoPr6N;
   color: #333333;
   font-weight: bold;
+  padding: 0 0 5px 16px;
+  line-height: 20px;
 }
-footer .footer-body ul li a span {
+.footer-container .footer-body .footer-cate-tag {
+  display: flex;
+  border-top: 1px solid #4fbad3;
+}
+.footer-container .footer-body .footer-cate-tag ul li {
+  padding: 8px 0;
+}
+.footer-container .footer-body .footer-cate-tag ul li a {
+  line-height: 16px;
+  font-size: 14px;
+  color: #757778;
+  padding-left: 2px;
+}
+.footer-container .footer-body .footer-cate-tag ul li a span {
   color: #80c8db;
   font-size: 7px;
   vertical-align: middle;
 }
-footer .footer-body .footer-cate div, 
-footer .footer-body .footer-tag div {
-  display: flex;
-  width: 331px;
-  border-top: 1px solid #4fbad3;
-}
-footer .footer-body .footer-cate div ul.footer-cate-1 {
+.footer-container .footer-body .footer-category .footer-cate-tag ul {
   flex-basis: 156px;
 }
-footer .footer-body .footer-cate ul.footer-cate-2 {
-  flex-basis: 175px;
-}
-footer .footer-body ul li a  {
-  color: #757778;
-  padding-left: 2px;
-}
-footer .footer-body .footer-cate ul li,
-footer .footer-body .footer-tag ul li {
-  font-size: 14px;
-  padding: 7px 0 4px 0px;
-}
-footer .footer-body .footer-tag {
+.footer-container .footer-body .footer-tag {
   margin-left: 58px;
 }
-footer .footer-body .footer-tag div ul {
-  flex-basis: 81px;
-  padding-left: 2px;
+.footer-container .footer-body .footer-tag .footer-cate-tag ul  {
+  flex-basis: 80px;
 }
 
-
-.footer-2 {
-  /*cant set*/
+footer .footer-footer {
   background-color: #4fbad3;
 }
-.footer-2 footer ul li {
-  float: left;
-  padding: 19px 13.5px 14px 13.5px;
-
+.footer-footer ul  {
+  position: relative;
 }
-.footer-2 footer ul li:first-child {
-  padding-left: 5px;
+.footer-footer ul li {
+  display: inline-block;
+  padding: 13px;
 }
-.footer-2 footer ul li:last-child {
-  float: right;
-}
-.footer-2 footer ul li a {
+.footer-footer ul li a {
   color: #edf7f9;
   font-size: 14px;
 }
-.footer-2 footer ul li:last-child a {
+.footer-footer ul li a.copyright {
+  position: absolute;
+  right: 0;
   font-size: 11px;
 }

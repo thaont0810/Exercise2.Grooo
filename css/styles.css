@@ -165,8 +165,6 @@ a {
         display: block;
         position: relative;
         overflow: hidden; }
-        .main .content .category .news__link:hover > {
-          opacity: 0.7; }
       .main .content .category .news__thumb {
         display: block;
         vertical-align: bottom;
@@ -175,18 +173,16 @@ a {
           opacity: 0.7;
           transform: scale(1.25);
           -ms-transform: scale(1.25);
-                           /* IE 9 
--moz-transform:scale(1.25); /* Firefox */
+          -moz-transform: scale(1.25);
           -webkit-transform: scale(1.25);
-          /* Safari and Chrome */
-          -o-transform: scale(1.25);
-          /* Opera */ }
+          -o-transform: scale(1.25); }
       .main .content .category .news__span {
         color: #50bad4;
         position: absolute;
         top: -9px;
         left: 1px;
-        font-size: 50px; }
+        font-size: 50px;
+        z-index: 9; }
         .main .content .category .news__span:after {
           content: "NEW";
           color: #fff;
@@ -220,6 +216,8 @@ a {
         .main .content .category .news__title__link {
           font-size: 20px;
           color: #333333; }
+        .main .content .category .news__title:hover {
+          opacity: 0.7; }
       .main .content .category .news__des {
         font-size: 14px;
         line-height: 20px;
@@ -475,6 +473,8 @@ a {
           background-color: #c54646; }
         .main .aside .category-sub .category__body .category__item:nth-child(5n+5) {
           background-color: #eba622; }
+        .main .aside .category-sub .category__body .category__item:hover {
+          opacity: 0.7; }
     .main .aside .recommend__list {
       margin: 0 9px; }
       .main .aside .recommend__list__item {
@@ -615,79 +615,78 @@ a {
 .ft__content {
   background-color: #ebeff1;
   padding-bottom: 55px; }
-  .ft__content .container {
+  .ft__content .ft__block {
     display: flex;
     color: #757778; }
-    .ft__content .container .ft-intro {
+    .ft__content .ft__block .ft-intro {
       flex-basis: 425px; }
-      .ft__content .container .ft-intro__header {
+      .ft__content .ft__block .ft-intro__header {
         padding: 36px 0; }
-        .ft__content .container .ft-intro__header .ft__logo {
+        .ft__content .ft__block .ft-intro__header .ft__logo {
           display: block; }
-          .ft__content .container .ft-intro__header .ft__logo__img {
+          .ft__content .ft__block .ft-intro__header .ft__logo__img {
             vertical-align: bottom; }
-      .ft__content .container .ft-intro__body {
+      .ft__content .ft__block .ft-intro__body {
         font-family: "Meiryo"; }
-        .ft__content .container .ft-intro__body__des {
+        .ft__content .ft__block .ft-intro__body__des {
           line-height: 22px;
           padding-top: 2px;
           font-size: 12px; }
-      .ft__content .container .ft-intro__footer {
+      .ft__content .ft__block .ft-intro__footer {
         text-align: right;
-        padding-top: 10px; }
-        .ft__content .container .ft-intro__footer__link {
+        padding-top: 5px; }
+        .ft__content .ft__block .ft-intro__footer__link {
           color: #80c8db;
           /*padding-top: 13px;*/
           font-weight: bold; }
-        .ft__content .container .ft-intro__footer__span {
+        .ft__content .ft__block .ft-intro__footer__span {
           font-size: 13px; }
-    .ft__content .container .ft-cate,
-    .ft__content .container .ft-tag {
+    .ft__content .ft__block .ft-other {
       flex-basis: 330px;
       padding-top: 105px;
       margin-left: 58px; }
-      .ft__content .container .ft-cate .ft-header__title,
-      .ft__content .container .ft-tag .ft-header__title {
+      .ft__content .ft__block .ft-other__title {
         font-size: 16px;
         font-weight: bold;
-        padding: 0 0 5px 16px;
-        line-height: 20px; }
-    .ft__content .container .ft-flex {
-      display: flex;
-      border-top: 1px solid #4fbad3; }
-      .ft__content .container .ft-flex .ft__list__item {
-        padding: 8px 0; }
-      .ft__content .container .ft-flex .ft__list__link {
-        line-height: 16px;
-        font-size: 14px;
-        color: #757778;
-        padding-left: 2px; }
-      .ft__content .container .ft-flex .ft__list__span {
-        color: #80c8db;
-        font-size: 7px;
-        vertical-align: middle; }
-    .ft__content .container .ft-cate .ft-flex .ft__list {
-      flex-basis: 156px; }
-    .ft__content .container .ft-tag .ft-flex .ft__list {
-      flex-basis: 80px; }
+        padding: 5px 0 5px 16px;
+        line-height: 20px;
+        border-bottom: 1px solid #4fbad3; }
+      .ft__content .ft__block .ft-other__list {
+        display: flex;
+        flex-wrap: wrap; }
+        .ft__content .ft__block .ft-other__list__item {
+          padding: 8px 0; }
+          .ft__content .ft__block .ft-other__list__item--50 {
+            width: 50%; }
+          .ft__content .ft__block .ft-other__list__item--25 {
+            width: 25%; }
+        .ft__content .ft__block .ft-other__list__link {
+          line-height: 16px;
+          font-size: 14px;
+          color: #757778;
+          padding-left: 2px; }
+        .ft__content .ft__block .ft-other__list__span {
+          color: #80c8db;
+          font-size: 7px;
+          vertical-align: middle; }
 .ft__footer {
   background-color: #4fbad3; }
-  .ft__footer .container {
+  .ft__footer .ft__block {
     display: flex;
     justify-content: space-between; }
-    .ft__footer .container .ft-menu {
+    .ft__footer .ft__block .ft-menu {
       position: relative; }
-      .ft__footer .container .ft-menu__item {
+      .ft__footer .ft__block .ft-menu__item {
         display: inline-block;
         padding: 13px; }
-        .ft__footer .container .ft-menu__item:first-child {
+        .ft__footer .ft__block .ft-menu__item:first-child {
           padding-left: 0; }
-      .ft__footer .container .ft-menu__link {
+      .ft__footer .ft__block .ft-menu__link {
         color: #edf7f9;
         font-size: 14px; }
-    .ft__footer .container .ft-copyright {
+    .ft__footer .ft__block .ft-copyright {
       padding: 15px 0; }
-      .ft__footer .container .ft-copyright__p {
+      .ft__footer .ft__block .ft-copyright__p {
         font-size: 11px;
         color: #edf7f9; }
 

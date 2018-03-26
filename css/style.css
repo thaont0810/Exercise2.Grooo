@@ -891,80 +891,85 @@ aside {
   background-color: #ebeff1;
   padding-bottom: 55px;
 }
-.ft__content .container {
+.ft__content .ft__block {
   display: flex;
   color: #757778;
 }
-.ft__content .container .ft-intro {
+.ft__content .ft__block .ft-intro {
   flex-basis: 425px;
 }
-.ft__content .container .ft-intro .ft-intro__header {
+.ft__content .ft__block .ft-intro .ft-intro__header {
   padding: 36px 0;
 }
-.ft__content .container .ft-intro .ft-intro__header .ft__logo {
+.ft__content .ft__block .ft-intro .ft-intro__header .ft__logo {
   display: block;
 }
-.ft__content .container .ft-intro .ft-intro__header .ft__logo .ft__logo__img {
+.ft__content .ft__block .ft-intro .ft-intro__header .ft__logo .ft__logo__img {
   vertical-align: bottom;
 }
 
-.ft__content .container .ft-intro .ft-intro__body {
+.ft__content .ft__block .ft-intro .ft-intro__body {
   font-family: "Meiryo";
 }
-.ft__content .container .ft-intro .ft-intro_body .ft-intro__body__des {
+.ft__content .ft__block .ft-intro .ft-intro__body .ft-intro__body__des {
   line-height: 22px;
   padding-top: 2px;
   font-size: 12px;
 }
-.ft__content .container .ft-intro .ft-intro__footer {
+.ft__content .ft__block .ft-intro .ft-intro__footer {
   text-align: right;
-  padding-top: 10px;
+  padding-top: 5px;
 }
-.ft__content .container .ft-intro .ft-intro__footer .ft-intro__footer__link {
+.ft__content .ft__block .ft-intro .ft-intro__footer .ft-intro__footer__link {
   color: #80c8db;
-  /*padding-top: 13px;*/
   font-weight: bold;
 }
-.ft__content .container .ft-intro .ft-intro__footer .ft-intro__footer__link .ft-intro__footer__span {
+.ft__content .ft__block .ft-intro .ft-intro__footer .ft-intro__footer__link .ft-intro__footer__span {
   font-size: 13px;
 }
 
-.container .ft-cate,
-.container .ft-tag {
+.ft__block .ft-other {
   flex-basis: 330px;
   padding-top: 105px;
   margin-left: 58px;
 }
-.container .ft-cate .ft-header__title,
-.container .ft-tag .ft-header__title {
+.ft__block .ft-other .ft-other__title  {
   font-size: 16px;
   font-weight: bold;
-  padding: 0 0 5px 16px;
+  padding: 5px 0 5px 16px;
   line-height: 20px;
+  border-bottom: 1px solid #4fbad3;
+
 }
-.container .ft-flex {
+.ft__block .ft-other__list {
   display: flex;
-  border-top: 1px solid #4fbad3;
+  flex-wrap: wrap;
 }
-.container .ft-flex ul li {
+.ft__block .ft-other__list li {
   padding: 8px 0;
 }
-.container .ft-flex ul li a {
+.ft__block .ft-other__list .ft-other__list__item--50 {
+  width: 50%;
+}
+.ft__block .ft-other__list .ft-other__list__item--25 {
+  width: 25%;
+}
+.ft__block .ft-other__list li a {
   line-height: 16px;
   font-size: 14px;
   color: #757778;
   padding-left: 2px;
 }
-.container .ft-flex ul li a span {
+.ft__block .ft-other__list li a span {
   color: #80c8db;
   font-size: 7px;
   vertical-align: middle;
 }
-.container .ft-cate .ft-flex ul {
+.ft__block .ft-cate ul {
   flex-basis: 156px;
 }
 
-.container  .ft-tag .ft-flex ul  {
+.ft__block  .ft-tag ul  {
   flex-basis: 80px;
 }
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <title>Ex2</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
@@ -11,7 +12,9 @@
   <header class="header container">
     <h1 class="header__logo">
       <a href="" class="header__logo__link">
-        <img class="header__logo__img" src="images/logo.png" alt="logo" />
+        <img class="header__logo__img header__logo__img--main" src="images/logo.png" alt="logo" />
+        <img class="header__logo__img header__logo__img--mobile" src="images/logo-aside.png" alt="logo" />
+
       </a>
     </h1>
     <form class="header__search" action="/search" method="get" role="search">
@@ -51,169 +54,169 @@
 
       <div class="content">
         <!-- start section -->
-        <section class="category">
-          <div class="category__header">
-            <h2 class="category__title"><span class="category__span">カテゴリー01</span></h2>
+        <section class="news">
+          <div class="news__header">
+            <h2 class="news__title news__title--display"><span class="news__span">カテゴリー01</span></h2>
+            <h2 class="news__title news__title--mobile">New release</h2>
+            <span class="news__span--mobile">保険に関する記事一覧</span>
           </div>
-
-          <!-- start news -->
-          <ul class="news">
-            <li class="news__item">
-              <a class="news__link" href="">
-                <img class="news__thumb" src="images/news1.png" alt="">
-                <span class="news__span">&#9700;</span>
+          <ul class="news__list">
+            <li class="news__list__item">
+              <a class="news__list__link" href="">
+                <img class="news__list__thumb" src="images/news1.png" alt="">
+                <span class="news__list__span">&#9700;</span>
               </a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー01</a>
-                  <div class="news__status__view">00,000 view</div>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー01</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href="">
-                <img class="news__thumb" src="images/news2.png" alt="">
-                <span class="news__span">&#9700;</span>
+            <li class="news__list__item">
+              <a class="news__list__link" href="">
+                <img class="news__list__thumb" src="images/news2.png" alt="">
+                <span class="news__list__span">&#9700;</span>
               </a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー02</a>
-                  <div class="news__status__view">00,000 view</div>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー02</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href="">
-                <img class="news__thumb" src="images/news3.png" alt="">
-                <span class="news__span">&#9700;</span>
+            <li class="news__list__item">
+              <a class="news__list__link" href="">
+                <img class="news__list__thumb" src="images/news3.png" alt="">
+                <span class="news__list__span">&#9700;</span>
               </a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー03</a>
-                  <div class="news__status__view">00,000 view</div>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー03</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
-                </div>
-              </div>
-            </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news1.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー01</a>
-                  <div class="news__status__view">00,000 view</div>
-                </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news2.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー02</a>
-                  <div class="news__status__view">00,000 view</div>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news1.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー01</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
-                </div>
-              </div>
-            </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news3.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー03</a>
-                  <div class="news__status__view">00,000 view</div>
-                </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news1.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー01</a>
-                  <div class="news__status__view">00,000 view</div>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news2.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー02</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
-                </div>
-              </div>
-            </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news2.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー02</a>
-                  <div class="news__status__view">00,000 view</div>
-                </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news3.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー03</a>
-                  <div class="news__status__view">00,000 view</div>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news3.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー03</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
-            <li class="news__item">
-              <a class="news__link" href=""><img class="news__thumb" src="images/news1.png" alt=""></a>
-              <div class="news__content">
-                <div class="news__status">
-                  <a href="" class="news__status__cate">カテゴリー01</a>
-                  <div class="news__status__view">00,000 view</div>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news1.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー01</a>
+                  <div class="news__list__status__view">00,000 view</div>
                 </div>
-                <h3 class="news__title"><a href="" class="news__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
-                <p class="news__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
-                <div class="news__footer">
-                  <div class="news__footer__date">2015.12.12</div>
-                  <a href="" class="news__footer__author">書き子さん名</a>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
+                </div>
+              </div>
+            </li>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news2.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー02</a>
+                  <div class="news__list__status__view">00,000 view</div>
+                </div>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
+                </div>
+              </div>
+            </li>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news3.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー03</a>
+                  <div class="news__list__status__view">00,000 view</div>
+                </div>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
+                </div>
+              </div>
+            </li>
+            <li class="news__list__item">
+              <a class="news__list__link" href=""><img class="news__list__thumb" src="images/news1.png" alt=""></a>
+              <div class="news__list__content">
+                <div class="news__list__status">
+                  <a href="" class="news__list__status__cate">カテゴリー01</a>
+                  <div class="news__list__status__view">00,000 view</div>
+                </div>
+                <h3 class="news__list__title"><a href="" class="news__list__title__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></h3>
+                <p class="news__list__des">わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、...</p>
+                <div class="news__list__footer">
+                  <div class="news__list__footer__date">2015.12.12</div>
+                  <a href="" class="news__list__footer__author">書き子さん名</a>
                 </div>
               </div>
             </li>
@@ -231,6 +234,12 @@
             <li class="paging__item"><a href="#" class="paging__item__no paging__item__no--next"><img class="" src="images/btn-next-paginate.png" alt="next button"></a></li>
           </ul>
           <div class="clearfix"></div>
+          <div class="news__footer">
+            <a href="" class="show-news">次の20件を表示</a>
+            <div class="paging--mobile">1/15
+              
+            </div>
+          </div>
           <!-- end paging -->
         </section>
         <!-- end section -->
@@ -239,60 +248,60 @@
         <aside class="aside">
           <!-- start email -->
           <div class="aside__block email">
-            <!-- <div class="email"> -->
-              <a href="" class="email__link">
-                <img class="email__logo" src="images/logo-aside.png" alt="logo">
-              </a>
-              <img class="email__illus" src="images/email-2bear.png" alt="">
-              <a href="" class="email__definition-laif">LAIFとは</a>
-              <p class="email__header">保険の最新情報をお届け致します。</p>
-              <form class="email__regis-mail" action="mail-regis" method="GET">
-                <input class="email__input" type="text" name="mail" placeholder="mail@sample.com">
-                <button class="email__btn" type="submit" name="registration">登録</button>
-              </form>
-              <p class="email__footer">メール登録すると、限定の情報やセミナー情報 などがいち早く手に入ります。</p>
-            <!-- </div> -->
+            <a href="" class="email__link">
+              <img class="email__logo" src="images/logo-aside.png" alt="logo">
+            </a>
+            <img class="email__illus" src="images/email-2bear.png" alt="">
+            <a href="" class="email__definition-laif">LAIFとは</a>
+            <p class="email__header">保険の最新情報をお届け致します。</p>
+            <form class="email__regis-mail" action="mail-regis" method="GET">
+              <input class="email__input" type="text" name="mail" placeholder="mail@sample.com">
+              <button class="email__btn" type="submit" name="registration">登録</button>
+            </form>
+            <p class="email__footer">メール登録すると、限定の情報やセミナー情報 などがいち早く手に入ります。</p>
           </div>
           <!-- end email -->
 
           <!-- start insurance -->
           <div class="aside__block insurance">
-            <!-- <div class="insurance"> -->
-              <div class="insurance__header">
-                <img class="insurance__photo" src="images/bear1.png" alt="">
-                <div class="insurance__title">
-                  <p class="insurance__title_des">保険のお悩み会場メディア「LAIF」</p>
-                  <a class="insurance__like" href=""><img class="insurance__like__img" src="images/insurance-like.png" alt=""></a>
-                </div>
+            <div class="insurance__header">
+              <img class="insurance__photo" src="images/bear1.png" alt="">
+              <div class="insurance__title">
+                <p class="insurance__title_des">保険のお悩み会場メディア「LAIF」</p>
+                <a class="insurance__like" href=""><img class="insurance__like__img" src="images/insurance-like.png" alt=""></a>
               </div>
-              <div class="insurance__body">
-                <p class="insurance__body__no">0,000人が<a href="" class="insurance__body__link">保険のお悩み会場メディア「LAIF」</a>について「いいね！」と言っています。</p>
-                <ul class="ppl">
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance1.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance2.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance3.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance4.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance5.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance1.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance2.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance3.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance4.png" alt=""></a></li>
-                  <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance5.png" alt=""></a></li>
-                </ul>
+            </div>
+            <div class="insurance__body">
+              <p class="insurance__body__no">0,000人が<a href="" class="insurance__body__link">保険のお悩み会場メディア「LAIF」</a>について「いいね！」と言っています。</p>
+              <ul class="ppl">
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance1.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance2.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance3.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance4.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance5.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance1.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance2.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance3.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance4.png" alt=""></a></li>
+                <li class="ppl__item"><a href="" class="ppl__link"><img class="ppl__ava" src="images/insurance5.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="sns">
+             <p class="sns__title">SNSで最新情報発信中！</p>
+             <ul class="sns__list">
+              <li class="sns__list__item"><a href="" class="sns__list__link"><img class="sns__list__img facebook" src="images/facebook.png" alt=""></a></li>
+              <li class="sns__list__item"><a href="" class="sns__list__link"><img  class="sns__list__img twitter" src="images/twitter.png" alt=""></a></li>
+              <li class="sns__list__item"><a href="" class="sns__list__link"><img class="sns__list__img ggl-plus" src="images/ggl-plus.png" alt=""></a></li>
+              <li class="sns__list__item"><a href="" class="sns__list__link"><img class="sns__list__img line" src="images/line-mobile.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="insurance__illus">
+              <!-- <span class="insurance__illus__circle"></span> -->
+              <img class ="insurance__illus__circle" src="images/follow-me.png" alt="">
+              <div class="insurance__illus__img">
+                <img class="insurance__illus__img--cut" src="images/bear2.png" alt="">
               </div>
-              <div class="sns">
-               <p class="sns__title">SNSで最新情報発信中！</p>
-               <ul class="sns__list">
-                <li class="sns__list__item"><a href="" class="sns__list__link facebook"><img class="sns__list__img" src="images/facebook.png" alt=""></a></li>
-                <li class="sns__list__item"><a href="" class="sns__list__link twitter"><img  class="sns__list__img"src="images/twitter.png" alt=""></a></li>
-                <li class="sns__list__item"><a href="" class="sns__list__link ggl-plus"><img class="sns__list__img" src="images/ggl-plus.png" alt=""></a></li>
-                </ul>
-              </div>
-              <div class="insurance__illus">
-                <span class="insurance__illus__circle"></span>
-                <img class="insurance__illus__img" src="images/bear2.png" alt="">
-              </div>
-            <!-- </div> -->
+            </div>
           </div>
          <!-- end insurance  -->
 
@@ -303,149 +312,143 @@
           <!-- end advertisement -->
 
           <!-- start category -->
-          <div class="aside__block category-sub">
-            <!-- <div class="category-sub"> -->
-              <div class="aside__block__header">
-                <h2 class="aside__block__title">Category</h2>
-                <span class="aside__block__span">カテゴリー</span>
-                <img class="aside__block__illus" src="images/flag.png" alt="">
-              </div>
-              <ul class="category__body">
-                <li class="category__item">
-                  <a class="category__item__link" href="#"><img class="category__item__img" src="images/cate1.png" alt="">
-                    <p class="category__item__title">カテゴリー名01</p>
-                    <img class="category__item__btn-next" src="images/btn-next.png" alt="">
-                  </a>
-                </li>
-                <li class="category__item">
-                  <a class="category__item__link" href="#"><img class="category__item__img" src="images/cate2.png" alt="">
-                    <p class="category__item__title">カテゴリー名02</p>
-                    <img class="category__item__btn-next" src="images/btn-next.png" alt="">
-                  </a>
-                </li>
-                <li class="category__item">
-                  <a class="category__item__link" href="#"><img class="category__item__img" src="images/cate3.png" alt="">
-                    <p class="category__item__title">カテゴリー名03</p>
-                    <img class="category__item__btn-next" src="images/btn-next.png" alt="">
-                  </a>
-                </li>
-                <li class="category__item">
-                  <a class="category__item__link" href="#"><img class="category__item__img" src="images/cate1.png" alt="">
-                    <p class="category__item__title">カテゴリー名04</p>
-                    <img class="category__item__btn-next" src="images/btn-next.png" alt="">
-                  </a>
-                </li>
-                <li class="category__item">
-                  <a class="category__item__link" href="#"><img class="category__item__img" src="images/cate2.png" alt="">
-                    <p class="category__item__title">カテゴリー名05</p>
-                    <img class="category__item__btn-next" src="images/btn-next.png" alt="">
-                  </a>
-                </li>
-              </ul>
-            <!-- </div> -->
+          <div class="aside__block category">
+            <div class="aside__block__header">
+              <h2 class="aside__block__title">Category</h2>
+              <span class="aside__block__span">カテゴリー</span>
+              <img class="aside__block__illus" src="images/flag.png" alt="">
+            </div>
+            <ul class="category__list">
+              <li class="category__list__item">
+                <a class="category__list__link" href="#"><img class="category__list__img" src="images/cate1.png" alt="">
+                  <p class="category__list__title">カテゴリー名01</p>
+                  <img class="category__list__btn-next" src="images/btn-next.png" alt="">
+                </a>
+              </li>
+              <li class="category__list__item">
+                <a class="category__list__link" href="#"><img class="category__list__img" src="images/cate2.png" alt="">
+                  <p class="category__list__title">カテゴリー名02</p>
+                  <img class="category__list__btn-next" src="images/btn-next.png" alt="">
+                </a>
+              </li>
+              <li class="category__list__item">
+                <a class="category__list__link" href="#"><img class="category__list__img" src="images/cate3.png" alt="">
+                  <p class="category__list__title">カテゴリー名03</p>
+                  <img class="category__list__btn-next" src="images/btn-next.png" alt="">
+                </a>
+              </li>
+              <li class="category__list__item">
+                <a class="category__list__link" href="#"><img class="category__list__img" src="images/cate1.png" alt="">
+                  <p class="category__list__title">カテゴリー名04</p>
+                  <img class="category__list__btn-next" src="images/btn-next.png" alt="">
+                </a>
+              </li>
+              <li class="category__list__item">
+                <a class="category__list__link" href="#"><img class="category__list__img" src="images/cate2.png" alt="">
+                  <p class="category__list__title">カテゴリー名05</p>
+                  <img class="category__list__btn-next" src="images/btn-next.png" alt="">
+                </a>
+              </li>
+            </ul>
           </div>
           <!-- end category -->
 
           <!-- start recommend -->
           <div class="aside__block recommend">
-            <!-- <div class="recommend"> -->
-              <div class="aside__block__header">
-                <h2 class="aside__block__title">Recommend</h2>
-                <span class="aside__block__span">編集部がおすすめする記事</span>
-                <img class="aside__block__illus" src="images/recommend.png" alt="">
-              </div>
-              <ul class="recommend__list">
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link recommend__list__link_active" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-                <li class="recommend__list__item">
-                  <a class="recommend__list__link" href="#">
-                    <img class="recommend__list__img" src="images/related-news.png" alt="">
-                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                  </a>
-                </li>
-              </ul>
-              <div class="recommend__footer">
-                <a class="recommend__footer__read-more" href="#"><span class="recommend__footer__span">&#9654;</span> 編集部がおすすめする記事</a>
-              </div>
-            <!-- </div> -->
+            <div class="aside__block__header">
+              <h2 class="aside__block__title">Recommend</h2>
+              <span class="aside__block__span">編集部がおすすめする記事</span>
+              <img class="aside__block__illus" src="images/recommend.png" alt="">
+            </div>
+            <ul class="recommend__list">
+              <li class="recommend__list__item">
+                <a class="recommend__list__link recommend__list__link_active" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+              <li class="recommend__list__item">
+                <a class="recommend__list__link" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+              <li class="recommend__list__item">
+                <a class="recommend__list__link" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+              <li class="recommend__list__item">
+                <a class="recommend__list__link" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+              <li class="recommend__list__item">
+                <a class="recommend__list__link" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+              <li class="recommend__list__item">
+                <a class="recommend__list__link" href="#">
+                  <img class="recommend__list__img" src="images/related-news.png" alt="">
+                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                </a>
+              </li>
+            </ul>
+            <div class="recommend__footer">
+              <a class="recommend__footer__read-more" href="#"><span class="recommend__footer__span">&#9654;</span> 編集部がおすすめする記事</a>
+            </div>
           </div>
             <!-- end aside recommend -->
 
           <!-- start ranking -->
           <div class="aside__block ranking">
-            <!-- <div class="ranking"> -->
-              <div class="aside__block__header">
-                <h2 class="aside__block__title">Ranking</h2>
-                <span class="aside__block__span">人気記事ランキング</span>
-                <img class="aside__block__illus" src="images/ranking.png" alt="">
+            <div class="aside__block__header">
+              <h2 class="aside__block__title">Ranking</h2>
+              <span class="aside__block__span">人気記事ランキング</span>
+              <img class="aside__block__illus" src="images/ranking.png" alt="">
+            </div>
+            <div class="ranking__body">
+              <input id="ranking__dairy" class="ranking__input" type="radio" name="tabs" checked>
+              <label class="ranking__label label__dairy" for="ranking__dairy">Dairy</label>
+
+              <input id="ranking__monthly" class="ranking__input" type="radio" name="tabs">
+              <label class="ranking__label label__monthly" for="ranking__monthly">Monthly</label>
+
+              <input id="ranking__total" class="ranking__input" type="radio" name="tabs">
+              <label class="ranking__label label__total" for="ranking__total">Total</label>
+
+              <div class="ranking__content ranking__dairy-content">
+                <ul class="ranking__list">
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                </ul>
               </div>
-              <div class="ranking__body">
-                <input id="ranking__dairy" class="ranking__input" type="radio" name="tabs" checked>
-                <label class="ranking__label label__dairy" for="ranking__dairy">Dairy</label>
-
-                <input id="ranking__monthly" class="ranking__input" type="radio" name="tabs">
-                <label class="ranking__label label__monthly" for="ranking__monthly">Monthly</label>
-
-                <input id="ranking__total" class="ranking__input" type="radio" name="tabs">
-                <label class="ranking__label label__total" for="ranking__total">Total</label>
-
-                <div class="ranking__content ranking__dairy-content">
-                  <ul class="ranking__list">
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                  </ul>
-                </div>
-                <div class="ranking__content ranking__monthly-content">
-                  <ul class="ranking__list">
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">tab2</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                  </ul>
-                </div>
-                <div class="ranking__content ranking__total-content">
-                  <ul class="ranking__list">
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">tab3</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                    <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
-                  </ul>
-                </div>
+              <div class="ranking__content ranking__monthly-content">
+                <ul class="ranking__list">
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">tab2</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                </ul>
               </div>
-            <!-- </div> -->
+              <div class="ranking__content ranking__total-content">
+                <ul class="ranking__list">
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">tab3</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                  <li class="ranking__list__item"><a href="" class="ranking__list__link">【LAIF用記事】生命保険の知っておくべきこんなこと</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
           <!-- end ranking -->
 
@@ -463,10 +466,18 @@
       <div class="container ft__block">
         <div class="ft-intro">
           <div class="ft-intro__header">
-            <a href="#" class="ft__logo"><img class="ft__logo__img" src="images/logo.png" alt=""></a>
+            <a href="#" class="ft__logo">
+              <img class="ft__logo__img" src="images/logo.png" alt="">
+              <img src="images/logo-aside.png" class="ft__logo__img--mobile">
+              <!-- <div>
+                <p class="ft__logo__text">保険のお悩み解消メディア </p>
+                <img src="images/laif.png" class="ft__logo__img__mobile" alt="">
+              </div> -->
+            </a>
           </div>
           <div class="ft-intro__body">
-            <p class="ft-intro__body__des">本文：【ダミーコピー】わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、生命保険が持つ力とはどのようなものでしょうか。それは「保障」と「長期の積み立て」です。負担をおさえた保険料で、いざというときに必要な資金をカバーしてくれるのが、生命保険の持つ「保障」の機能です。「死亡」「働けない・大きな病気」「病気・けが」といったときに力を発揮します。それに対して、じっくりお金を増やしたいときは、「長期の積み立て」機能を活用します。長い期間でお金を増やすなら、生命保険のほうが預貯金などより有利なことが多いからです。</p>
+            <p class="ft-intro__body__des">本文：【ダミーコピー】わたしたちは将来が見えないので、生命保険に加入します。不安を安心に変えるために、いざというときに生命保険が力を発揮してくれることを期待しているのです。では、生命保険が持つ力とはどのようなものでしょうか。それは「保障」と「長期の積み立て」です。負担をおさえた保険料で、いざというときに必要な資金をカバーしてくれるのが、生命保険の持つ「保障」の機能です。「死亡」「働けない・大きな病気」「病気・けが」といったときに力を発揮します。それに対して、じっくりお金を増やしたいときは、「長期の積み立て」機能を活用します。長い期間でお金を増やすなら、生命保険のほうが預貯金などより有利なことが多いからです。
+            </p>
           </div>
           <div class="ft-intro__footer">
             <a href="" class="ft-intro__footer__link"><span class="ft-intro__footer__span">&#9654;</span>LAIFとは</a>
@@ -474,7 +485,7 @@
         </div>
         <div class="ft-other ft-cate">
           <p class="ft-other__title ">カテゴリー</p>
-          <ul class="ft-other__list">
+          <ul class="ft-other__list ft-other__list--50">
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
@@ -491,7 +502,7 @@
         </div>
         <div class="ft-other ft-tag">
           <p class="ft-other__title">カテゴリー</p>
-          <ul class="ft-other__list">
+          <ul class="ft-other__list ft-other__list--25">
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>
@@ -523,11 +534,11 @@
     <div class="ft__footer">
       <div class="container ft__block">
         <ul class="ft-menu">
-          <li class="ft-menu__item"><a href="" class="ft-menu__link top">LAIF TOP</a></li>
-          <li class="ft-menu__item"><a href="" class="ft-menu__link list-author">ライター一覧</a></li>
-          <li class="ft-menu__item"><a href="" class="ft-menu__link operating-company">運営会社</a></li>
-          <li class="ft-menu__item"><a href="" class="ft-menu__link term-of-service">利用規約</a></li>
-          <li class="ft-menu__item"><a href="" class="ft-menu__link sitemap">サイトマップ</a></li>
+          <li class="ft-menu__item ft-menu__item--50"><a href="" class="ft-menu__link top">LAIF TOP</a></li>
+          <li class="ft-menu__item ft-menu__item--50"><a href="" class="ft-menu__link list-author">ライター一覧</a></li>
+          <li class="ft-menu__item ft-menu__item--50"><a href="" class="ft-menu__link operating-company">運営会社</a></li>
+          <li class="ft-menu__item ft-menu__item--50"><a href="" class="ft-menu__link term-of-service">利用規約</a></li>
+          <li class="ft-menu__item ft-menu__item--50"><a href="" class="ft-menu__link sitemap">サイトマップ</a></li>
         </ul>
         <div class="ft-copyright"><p href="" class="ft-copyright__p">&copy;Copyright 2015 LAIF All rights reserved</p></div>
       </div>

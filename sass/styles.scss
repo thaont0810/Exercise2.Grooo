@@ -360,6 +360,8 @@ a {
           // }
           @media screen and (max-width: $mobile) {
             flex-basis: 160px;
+            display: flex;
+            align-items: center;
           }
         }
         &__thumb {
@@ -531,10 +533,10 @@ a {
           display: block;
           background-color: #4fbad3;
           margin: 17px 20px 17px 20px;
-          padding: 35px 38px;
+          padding: 30px 38px;
           font-size: 28px;
           color: #fff;
-          line-height: 20px;
+          line-height: 30px;
           border-radius: 4px;
           font-weight: 600;
           position: relative;
@@ -677,7 +679,7 @@ a {
         padding: 0 17px;
         justify-content: flex-end;
         @media screen and (max-width: $mobile) {
-          padding: 25px 0;
+          padding: 25px 35px;
           text-align: center;
           border: 2px solid #4fbad3;
           border-radius: 6px;
@@ -947,7 +949,7 @@ a {
             right: 125px;
           }
         }
-        &__img{
+        &__img {
           &--cut {
             position: absolute;
             right: 5px;
@@ -1073,6 +1075,10 @@ a {
         display: block;
         text-align: right;
         margin: 0 9px;
+        @media screen and (max-width: $mobile) {
+          padding: 14px 14px;
+          margin: 0;
+        }
         &__read-more {
           font-family: "Meiryo";
           display: block;
@@ -1083,12 +1089,39 @@ a {
           color: #4fbad3;
           text-decoration: underline;
           text-underline-position: under;
+          @media screen and (max-width: $mobile) {
+            font-size: 28px;
+            padding: 30px 85px;
+            background-color: #4fbad3;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 7px;
+            position: relative;
+          }
+          &:after {
+            @media screen and (max-width: $mobile) {
+              position: absolute;
+              content: "";
+              width: 22px;
+              height: 40px;
+              background: url(../images/btn-next-white-mobile.png);
+              background-repeat: no-repeat;
+              right: 20px;
+              top: 25px;
+            }
+          }
+          
         }
         &__span {
           text-decoration: none ;
           display: inline-block;
           padding-right: 2px;
           font-size: 12px;
+          @media screen and (max-width: $mobile) {
+            display: none;  
+          }
         }
       }
     }
@@ -1230,6 +1263,7 @@ a {
     padding-bottom: 55px;
     @media screen and (max-width: $mobile) {
       display: inline-block; 
+      padding-bottom: 25px;
     }
     .ft__block {
       display: flex;
@@ -1237,14 +1271,14 @@ a {
       @media screen and (max-width: $mobile) {
         display: block;
         width: $mobile;
-        padding: 18px;
+        padding: 0 18px;
       }
       .ft-intro {
         flex-basis: 425px;
         &__header {
           padding: 36px 0;
           @media screen and (max-width: $mobile) {
-            padding: 0 0 15px;
+            padding: 18px 0 15px;
             display: flex;
             justify-content: center;
 
@@ -1300,11 +1334,18 @@ a {
               font-size: 28px;
               padding: 30px 0;
               display: block;
-
+              position: relative;
+              background: #fff;
             }
           }
           &__span {
             font-size: 13px;
+            @media screen and (max-width: $mobile) {
+              position: absolute;
+              left: 13px;
+              top: 37px;
+              font-size: 16px;
+            }
           }
         }
       }
@@ -1314,6 +1355,7 @@ a {
         margin-left: 58px;
         @media screen and(max-width: $mobile) {
           margin-left: 0;
+          padding-top: 22px;
         }
         &__title {
           font-size: 16px;
@@ -1322,11 +1364,59 @@ a {
           line-height: 20px;
           border-bottom: 1px solid #4fbad3;
           @media screen and(max-width: $mobile) {
-            padding: 26px 20px;
+            display: none;
+            // padding: 21px 60px 21px 20px;
+            // font-size: 28px;
+            // line-height: 30px;
+            // background-color: #4fbad3;
+            // color: #fff;
+            // position: relative;
+          }
+          &:after {
+            @media screen and (max-width: $mobile) {
+              position: absolute;
+              content: "";
+              width: 25px;
+              height: 45px;
+              background: url(../images/btn-next-white-mobile.png);
+              background-repeat: no-repeat;
+              right: 20px;
+              top: 15px;
+              transform: rotate(90deg);
+            }
+          }
+        }
+        &__title--btn {
+          @media screen and(max-width: $mobile) {
+            padding: 21px 60px 21px 20px;
             font-size: 28px;
+            line-height: 30px;
             background-color: #4fbad3;
             color: #fff;
+            position: relative;
+            border: none;
+            width: 604px;
+            text-align: -webkit-left;
           }
+          &:after {
+            @media screen and (max-width: $mobile) {
+              position: absolute;
+              content: "";
+              width: 25px;
+              height: 45px;
+              background: url(../images/btn-next-white-mobile.png);
+              background-repeat: no-repeat;
+              right: 20px;
+              top: 15px;
+              transform: rotate(90deg);
+            }
+            &:active {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+        .showDropdown {
+          display:block;
         }
 
         // way 1
@@ -1363,6 +1453,9 @@ a {
 
         // way 2 to divide ft-other to 2 or 4 columns
         &__list {
+          @media screen and(max-width: $mobile) {
+            display: none;
+          }
           &__item {
             padding: 8px 0;
             direction: left;
@@ -1441,7 +1534,7 @@ a {
             @media screen and (max-width: $mobile) {
               width: 298px;
               background-color: #3eabc8;
-              padding: 18px 30px;
+              padding: 18px 50px 18px 30px;
               color: #fff;
             }
           }

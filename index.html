@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -404,7 +405,10 @@
               </li>
             </ul>
             <div class="recommend__footer">
-              <a class="recommend__footer__read-more" href="#"><span class="recommend__footer__span">&#9654;</span> 編集部がおすすめする記事</a>
+              <a class="recommend__footer__read-more" href="#">
+                <span class="recommend__footer__span">&#9654;</span> 編集部がおすすめする記事
+                <!-- <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+              </a>
             </div>
           </div>
             <!-- end aside recommend -->
@@ -489,8 +493,9 @@
           </div>
         </div>
         <div class="ft-other ft-cate">
-          <p class="ft-other__title ">カテゴリー</p>
-          <ul class="ft-other__list ft-other__list--50">
+          <p class="ft-other__title">カテゴリー</p>
+          <button onclick="myFunction()" class="ft-other__title--btn">カテゴリー</button>
+          <ul class="ft-other__list ft-other__list--50" id="myDropdown">
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
@@ -505,9 +510,22 @@
               <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
           </ul>
         </div>
+
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("showDropdown");
+        }
+        function myFunction2() {
+          document.getElementById("myDropdownTag").classList.toggle("showDropdown");
+        }
+        </script>
+
         <div class="ft-other ft-tag">
           <p class="ft-other__title">カテゴリー</p>
-          <ul class="ft-other__list ft-other__list--25">
+          <button onclick="myFunction2()" class="ft-other__title--btn">カテゴリー</button>
+          <ul class="ft-other__list ft-other__list--25" id="myDropdownTag">
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
               <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>

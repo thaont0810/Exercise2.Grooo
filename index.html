@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $(".btn-click").click(function(){
+            $(this).toggleClass("btn-click__icon");
+            $(this).next().toggleClass("showDropdown");
+        });
+    });
+</script>
 </head>
 <body>
 
@@ -366,44 +375,46 @@
               <span class="aside__block__span">編集部がおすすめする記事</span>
               <img class="aside__block__illus" src="images/recommend.png" alt="">
             </div>
-            <ul class="recommend__list">
-              <li class="recommend__list__item">
-                <a class="recommend__list__link recommend__list__link_active" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-              <li class="recommend__list__item">
-                <a class="recommend__list__link" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-              <li class="recommend__list__item">
-                <a class="recommend__list__link" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-              <li class="recommend__list__item">
-                <a class="recommend__list__link" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-              <li class="recommend__list__item">
-                <a class="recommend__list__link" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-              <li class="recommend__list__item">
-                <a class="recommend__list__link" href="#">
-                  <img class="recommend__list__img" src="images/related-news.png" alt="">
-                  <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
-                </a>
-              </li>
-            </ul>
+            <div class="recommend__scroll">
+              <ul class="recommend__list">
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link recommend__list__link--active" href="#">
+                    <img class="recommend__list__img" src="images/news1.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link" href="#">
+                    <img class="recommend__list__img" src="images/related-news.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link" href="#">
+                    <img class="recommend__list__img" src="images/related-news.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link" href="#">
+                    <img class="recommend__list__img" src="images/related-news.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link" href="#">
+                    <img class="recommend__list__img" src="images/related-news.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+                <li class="recommend__list__item">
+                  <a class="recommend__list__link" href="#">
+                    <img class="recommend__list__img" src="images/related-news.png" alt="">
+                    <h3 class="recommend__list__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="recommend__footer">
               <a class="recommend__footer__read-more" href="#">
                 <span class="recommend__footer__span">&#9654;</span> 編集部がおすすめする記事
@@ -494,63 +505,219 @@
         </div>
         <div class="ft-other ft-cate">
           <p class="ft-other__title">カテゴリー</p>
-          <button onclick="myFunction()" class="ft-other__title--btn">カテゴリー</button>
+          <button class="btn-click ft-other__title--btn">カテゴリー</button>
           <ul class="ft-other__list ft-other__list--50" id="myDropdown">
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み</a></li>
-              <li class="ft-other__list__item ft-other__list__item--50"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み</a></li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 学資保険のお悩み
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--50">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 教育保険のお悩み
+              </a>
+            </li>
           </ul>
         </div>
 
-        <script>
+        <!-- <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
         function myFunction() {
           document.getElementById("myDropdown").classList.toggle("showDropdown");
+
         }
         function myFunction2() {
           document.getElementById("myDropdownTag").classList.toggle("showDropdown");
         }
-        </script>
+        </script> -->
 
         <div class="ft-other ft-tag">
-          <p class="ft-other__title">カテゴリー</p>
-          <button onclick="myFunction2()" class="ft-other__title--btn">カテゴリー</button>
+          <p class="ft-other__title">タグ</p>
+          <button class="btn-click ft-other__title--btn">タグ</button>
+          <!-- <button onclick="myFunction2()" class="ft-other__title--btn">タグ</button> -->
           <ul class="ft-other__list ft-other__list--25" id="myDropdownTag">
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 終身保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 定期保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 死亡率</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 終身保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 定期保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 死亡率</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 終身保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 定期保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 死亡率</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 手術</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 怪我</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 掛け捨て</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 終身保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 定期保険</a></li>
-              <li class="ft-other__list__item ft-other__list__item--25"><a href="" class="ft-other__list__link"><span class="ft-other__list__span">&#9654;</span> 死亡率</a></li>
-            </ul>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 手術</a>
+              </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 怪我</a>
+              </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 掛け捨て
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 終身保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 定期保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 死亡率
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 手術
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 怪我
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 掛け捨て
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 終身保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 定期保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 死亡率
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 手術
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 怪我
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 掛け捨て
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 終身保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 定期保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 死亡率
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 手術
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 怪我
+              </a>
+            </li>
+
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 掛け捨て
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 終身保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 定期保険
+              </a>
+            </li>
+            <li class="ft-other__list__item ft-other__list__item--25">
+              <a href="" class="ft-other__list__link">
+                <span class="ft-other__list__span">&#9654;</span> 死亡率
+              </a>
+            </li>
+
+          </ul>
         </div>
       </div>
     </div>

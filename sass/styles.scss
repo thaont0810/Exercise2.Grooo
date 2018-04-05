@@ -1469,6 +1469,11 @@ a {
             text-align: -webkit-left;
             display: block;
           }
+          &:hover {
+            @media screen and (max-width: $mobile) {
+              cursor: pointer;
+            }
+          }
           &:after {
             @media screen and (max-width: $mobile) {
               position: absolute;
@@ -1483,7 +1488,9 @@ a {
               transform: rotate(90deg);
             }
             &:active {
-              transform: rotate(-90deg);
+              @media screen and (max-width: $mobile) {
+                transform: rotate(-90deg);
+              }
             }
           }
         }
@@ -1634,6 +1641,11 @@ a {
             padding-left: 0;
             @media screen and (max-width: $mobile) {
               padding: 18px 30px;
+            }
+          }
+          &:hover {
+            @media screen and (max-width: $mobile) {
+              cursor: pointer;
             }
           }
           &:after {

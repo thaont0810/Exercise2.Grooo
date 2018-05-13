@@ -35,24 +35,34 @@
 
 
   <!-- main -->
-  <div class="main">
-    <div class="container-normal">
-      <form action="index.html">
-        First name:
-        <input type="text" name="fname" placeholder="John" required><br>
-        Last name:
-        <input type="text" name="lname" placeholder="Nguyen" required><br>
-        Birthday (date and time):
-        <input type="date" name="bday" required><br>
-        Address:
-        <input type="text" name="address" placeholder=" 1A street, Japan" required></br>
-        Phone:
-        <input type="number" name="phone" placeholder="12345" required><br>
-        Email:
-        <input type="email" name="email" placeholder="Johnnguyen@gmail.com" required><br>
-        User password:
-        <input type="password" name="psw" placeholder="12345" required=""><br>
-        <input type="submit" value="Send">
+  <div class="main main-bg">
+    <div class="container-normal register">
+      <h2 class="register__title">Register with Laif</h2>
+      <form class="register__form" action="index.html">
+        <div class="register__form__group">
+          <input class="register__form__fill" type="text" name="name" required>
+          <label class="register__form__label" for="name">Name</label>
+        </div>
+        <div class="register__form__group">
+          <input class="register__form__fill" type="text" name="address" required>
+          <label class="register__form__label" for="address">Address</label>
+        </div>
+        <div class="register__form__group">
+          <input class="register__form__fill" type="" name="phone" required>
+          <label class="register__form__label" for="phone">Phone</label>
+        </div>
+        <div class="register__form__group">
+          <input class="register__form__fill" type="email" name="email" required>
+          <label class="register__form__label" for="email">Email</label>
+        </div>
+        <div class="register__form__group">
+          <input class="register__form__fill" type="password" name="psw" required>
+          <label class="register__form__label" for="password">Password</label>
+        </div>
+        <div class="register__form__submit">
+          <button class="register__form__submit__btn"  type="submit" value="Send">Submit 
+          Comment</button>
+        </div>
 
       </form>
     </div>

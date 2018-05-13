@@ -61,7 +61,7 @@
 
       <div class="content">
 
-        <!-- start news article -->
+        <!-- start article -->
         <div class="article">
           <!-- <div class="article__header">
             <h2 class="article__title article__title--display">
@@ -73,7 +73,7 @@
           </div> -->
 
           <div class="article__header">
-            <h3 class="article__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h3>
+            <h2 class="article__title">【LAIF用記事】生命保険の知っておくべきこんなこと</h2>
             <div class="article__info">
               <a href="" class="article__info__author">By 書き子さん名</a>
               <div class="article__info__date"> | Posted on 2018.2.10</div>
@@ -97,17 +97,23 @@
           </div>
           <div class="article__footer">
             <ul class="social">
-              <li class="social__item"><a class="social__item__link fa fa-facebook">Facebook</a></li>
-              <li class="social__item"><a class="social__item__link fa fa-google">Google</a></li>
-              <li class="social__item"><a class="social__item__link fa fa-twitter">Twitter</a></li>
+              <li class="social__item"><a class="social__item__link fa fa-facebook"><span class="social__item__span">Facebook</span></a></li>
+              <li class="social__item"><a class="social__item__link fa fa-google"><span class="social__item__span">Google</span></a></li>
+              <li class="social__item"><a class="social__item__link fa fa-twitter"><span class="social__item__span">Twitter</span></a></li>
             </ul>
             <div class="comment">
-              
+              <h3 class="comment__title">Leave a comment</h3>
+              <form class="comment__form" method="post" action="send_comment.php">
+                <input class="comment__form__fill comment__form__form--input" type="text" name="full_name" placeholder="Full Name (required)" required><br>
+                <input class="comment__form__fill comment__form__form--input" type="email" name="email_address" placeholder="Email (not be published)" required><br>
+                <textarea class="comment__form__fill comment__form__fill--text" type="text" name="comment" maxlength="500" placeholder="Comment"></textarea><br>
+                <button class="comment__form__btn">Submit Comment</button>
+              </form>
             </div>
           </div>
 
         </div>
-        <!-- end news article -->
+        <!-- end article -->
 
         <!-- aside right -->
         <aside class="aside">

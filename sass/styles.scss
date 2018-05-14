@@ -815,22 +815,31 @@ a {
   }
 }
 
-// register page
-.main-bg {
-  // background: url(../images/logo-flower.png);
-  // background-position: 650px 0;
-  // background-repeat: no-repeat;
-  // background-size: 550px 550px;
-  background-color: #95A5A6;
-}
-.register {
+// custom for login and sign up
+
+.custom {
   background-color: #fff;
-  padding: 30px 30px 50px;
+  width: 700px;
+  margin: 0 auto;
+  padding: 40px 100px;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, .2);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media screen and (max-width: $mobile) {
+    width: 500px;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+  }
+  &__header {
+    display: flex;    
+    justify-content: space-between;
+  }
   &__title {
-    padding: 20px 0 40px;
     font-size: 30px;
+    color: #686767;
   }
   &__form {
+    padding-top: 50px;
     &__group {
       display: flex;
       flex-flow: column-reverse;
@@ -838,17 +847,16 @@ a {
       position: relative;
     }
     &__fill {
-      width: 60%;
-        // height: 35px;
-        // margin-bottom: 15px;
+      width: 100%;
       transition: all 0.2s;
       border: 0;
       border-bottom: 1px solid #ccc;
       border-radius: 0;
+      font-size: 15px;
       &:focus {
         outline: 0;
         border-bottom: 2px solid #4fbad3;
-        & + .register__form__label {
+        & + .custom__form__label {
           color: #007ACC;
           opcity: 1;
           top: -30px;
@@ -864,22 +872,76 @@ a {
       opacity: 0.5;
       font-size: 18px;
     }
-    &__submit {
-      &__btn {
-      padding: 10px 20px;
+    &__ft {
+      display: flex;
+      justify-content: space-between;
       font-size: 15px;
+      color: #605f5f;
+      &__lable {
+
+      }
+      &__link {
+        text-decoration: underline;
+        color: #605f5f;
+        
+      }
+    }
+    &__submit {
+
+      padding-top: 30px;
+      &__btn {
+      padding: 15px 15px;
+      width:100%;
+      font-size: 25px;
       border-radius: 5px;
       background-color: #4fbad3;
       color: #fff;
       border: 1px solid #ccc;
       box-shadow: 0 2px 0 #d7cdd3;
       cursor: pointer;
+      margin: 0 auto;
+      display: block;
       }
     }
   }
 }
 
+// login page 
 
+.login {
+  .custom__header {
+    justify-content: center;
+  }
+  .custom__form {
+    &__img {
+      text-align: center;
+      margin: 0 0 45px 0;
+    }
+    &__ava {
+      border-radius: 50%;
+      width: 150px;
+    }
+    // &__ft {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   font-size: 15px;
+    //   color: #605f5f;
+    //   &__lable {
+
+    //   }
+    //   &__link {
+    //     text-decoration: underline;
+    //     color: #605f5f;
+        
+    //   }
+    // }
+    &__submit {
+      &__btn {
+        // padding: 15px 214px;
+      }
+    }
+  }
+}
 
 
 

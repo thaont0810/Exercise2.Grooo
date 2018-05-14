@@ -27,7 +27,7 @@
       <input class="header__search__input" type="text" name="search-input" value="" placeholder="気になるワード">
     </form>
     <ul class="header__user">
-      <li class="header__user__item header__user__register"><a class="header__user__link" href="register.html">会員登録</a></li>
+      <li class="header__user__item header__user__register"><a class="header__user__link" href="signup.html">会員登録</a></li>
       <li class="header__user__item header__user__login"><a class="header__user__link" href="login.html">ログイン</a></li>
     </ul>
   </header>
@@ -35,35 +35,41 @@
 
 
   <!-- main -->
-  <div class="main main-bg">
-    <div class="container-normal register">
-      <h2 class="register__title">Register with Laif</h2>
-      <form class="register__form" action="index.html">
-        <div class="register__form__group">
-          <input class="register__form__fill" type="text" name="name" required>
-          <label class="register__form__label" for="name">Name</label>
+  <div class="main">
+    <div class="container-normal custom">
+      <div class="custom__header">
+        <h2 class="custom__title">Sign up!</h2>
+        <img class="custom__img" src="images/logo-aside.png">
+      </div>
+      <form class="custom__form" action="index.html">
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="text" name="name" required>
+          <label class="custom__form__label" for="name">Name</label>
         </div>
-        <div class="register__form__group">
-          <input class="register__form__fill" type="text" name="address" required>
-          <label class="register__form__label" for="address">Address</label>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="text" name="address" required>
+          <label class="custom__form__label" for="address">Address</label>
         </div>
-        <div class="register__form__group">
-          <input class="register__form__fill" type="" name="phone" required>
-          <label class="register__form__label" for="phone">Phone</label>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="text" name="phone" required>
+          <label class="custom__form__label" for="phone">Phone</label>
         </div>
-        <div class="register__form__group">
-          <input class="register__form__fill" type="email" name="email" required>
-          <label class="register__form__label" for="email">Email</label>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="email" name="email" required>
+          <label class="custom__form__label" for="email">Email</label>
         </div>
-        <div class="register__form__group">
-          <input class="register__form__fill" type="password" name="psw" required>
-          <label class="register__form__label" for="password">Password</label>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="password" name="psw" required>
+          <label class="custom__form__label" for="password">Password</label>
         </div>
-        <div class="register__form__submit">
-          <button class="register__form__submit__btn"  type="submit" value="Send">Submit 
-          Comment</button>
+        <div class="custom__form__ft">
+          <label class="custom__form__ft__label">
+            <input class="custom__form__ft__input" type="checkbox" checked="checked" name="accept"> I agree with the Terms and Conditions
+          </label>
         </div>
-
+        <div class="custom__form__submit">
+          <button class="custom__form__submit__btn"  type="submit" value="Send">Sign me up!</button>
+        </div>
       </form>
     </div>
   </div>

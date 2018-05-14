@@ -17,7 +17,7 @@
       <span class="header__icon__bar"></span>
     </div>
     <h1 class="header__logo">
-      <a href="" class="header__logo__link">
+      <a href="index.html" class="header__logo__link">
         <img class="header__logo__img header__logo__img--main" src="images/logo.png" alt="logo" />
         <img class="header__logo__img header__logo__img--mobile" src="images/logo-mobile.png" alt="logo" />
       </a>
@@ -27,7 +27,7 @@
       <input class="header__search__input" type="text" name="search-input" value="" placeholder="気になるワード">
     </form>
     <ul class="header__user">
-      <li class="header__user__item header__user__register"><a class="header__user__link" href="register.html">会員登録</a></li>
+      <li class="header__user__item header__user__register"><a class="header__user__link" href="signup.html">会員登録</a></li>
       <li class="header__user__item header__user__login"><a class="header__user__link" href="login.html">ログイン</a></li>
     </ul>
   </header>
@@ -36,8 +36,32 @@
 
   <!-- main -->
   <div class="main">
-    <div class="container-normal">
-      login
+    <div class="container-normal custom login">
+      <div class="custom__header">
+        <h2 class="custom__title">Welcome Back!</h2>
+      </div>
+      <form class="custom__form" action="index.html">
+        <div class="custom__form__img">
+          <img class="custom__form__ava" src="images/avt.jpg" alt="avatar">
+        </div>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="text" name="name" required>
+          <label class="custom__form__label" for="name">Name</label>
+        </div>
+        <div class="custom__form__group">
+          <input class="custom__form__fill" type="password" name="psw" required>
+          <label class="custom__form__label" for="password">Password</label>
+        </div>
+        <div class="custom__form__ft">
+          <label class="custom__form__ft__label">
+            <input class="custom__form__ft__input" type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          <a class="custom__form__ft__link" href="#">Forgot password?</a>
+        </div>
+        <div class="custom__form__submit">
+          <button class="custom__form__submit__btn"  type="submit" value="Send">Log in</button>
+        </div>
+      </form>
     </div>
   </div>
 

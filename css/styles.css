@@ -47,19 +47,15 @@ a {
   @media screen and (max-width: 640px) {
     .header {
       width: 640px; } }
-  .header__icon {
-    display: none; }
-    @media screen and (max-width: 640px) {
-      .header__icon {
-        display: block; } }
   .header__logo {
     padding: 39px 0;
     line-height: 10px;
-    flex-basis: 510px;
+    width: 510px;
     position: relative; }
     @media screen and (max-width: 640px) {
       .header__logo {
-        padding: 16px 0 19px 155px; } }
+        padding: 16px 0 19px;
+        width: 640px; } }
     .header__logo__link {
       display: block; }
     @media screen and (max-width: 640px) {
@@ -69,7 +65,8 @@ a {
       display: none; }
       @media screen and (max-width: 640px) {
         .header__logo__img--mobile {
-          display: block; } }
+          display: block;
+          margin: auto; } }
     .header__logo__img:hover {
       opacity: 0.7; }
   .header__search {
@@ -98,17 +95,52 @@ a {
       padding: 0 68px 0 18px; }
       .header__search__input::placeholder {
         color: #8acde0; }
+  .header__span {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 35px;
+    color: #4fbad3;
+    cursor: pointer; }
+    @media screen and (max-width: 640px) {
+      .header__span {
+        display: block; } }
   .header__user {
     font-size: 0;
     margin: 30px 0; }
     @media screen and (max-width: 640px) {
       .header__user {
-        display: none; } }
+        height: 50%;
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background: #e4f8fd;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 50px;
+        margin: 0; } }
+    .header__user__span {
+      position: absolute;
+      top: 0;
+      right: 12px;
+      font-size: 40px;
+      display: none; }
+      @media screen and (max-width: 640px) {
+        .header__user__span {
+          display: block; } }
+      .header__user__span:hover {
+        background: red; }
     .header__user__item {
       width: 180px;
       display: inline-block;
       margin-left: 9px;
       transition: all 0.3s; }
+      @media screen and (max-width: 640px) {
+        .header__user__item {
+          margin: 5px 5px 0 20px; } }
     .header__user__link {
       border-bottom: 2px solid;
       border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -117,13 +149,26 @@ a {
       display: block;
       font-size: 16px;
       text-align: center; }
+      @media screen and (max-width: 640px) {
+        .header__user__link {
+          border-bottom: 0;
+          color: #000;
+          padding: 5px 0;
+          text-align: -webkit-left;
+          font-size: 20px; } }
     .header__user__register {
       background-color: #5082d4; }
+      @media screen and (max-width: 640px) {
+        .header__user__register {
+          background-color: #e4f8fd; } }
       .header__user__register:hover {
         opacity: 0.7; }
     .header__user__login {
       background-color: #d63232;
       margin-right: 0; }
+      @media screen and (max-width: 640px) {
+        .header__user__login {
+          background-color: #e4f8fd; } }
       .header__user__login:hover {
         opacity: 0.7; }
 
@@ -513,7 +558,8 @@ a {
       color: #fff;
       padding: 10px 30px;
       width: 185px;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       @media screen and (max-width: 640px) {
         .article__footer .social__item {
           width: 30px;
@@ -572,10 +618,14 @@ a {
         border-radius: 5px;
         background-color: #4fbad3;
         color: #fff;
-        border: 1px solid #ccc; }
+        border: 1px solid #ccc;
+        cursor: pointer; }
         @media screen and (max-width: 640px) {
           .article__footer .comment__form__btn {
             font-size: 20px; } }
+        .article__footer .comment__form__btn:hover {
+          opacity: 0.7;
+          transition: 0.3s; }
 
 .custom {
   background-color: #fff;
@@ -614,22 +664,22 @@ a {
         transition: all 0.2s; }
       .custom__form__input:focus {
         outline: 0; }
-        .custom__form__input:focus + .custom__form__label {
-          font-size: 14px;
+        .custom__form__input:focus::placeholder {
           opacity: 1;
-          bottom: 30px; }
+          color: #ccc; }
+        .custom__form__input:focus + .custom__form__label {
+          bottom: 30px;
+          opacity: 1;
+          font-size: 14px; }
           .custom__form__input:focus + .custom__form__label:after {
             visibility: visible;
             width: 100%;
             left: 0;
             bottom: -30px; }
-        .custom__form__input:focus::placeholder {
-          opacity: 1;
-          color: #ccc; }
       .custom__form__input:valid + .custom__form__label {
         bottom: 30px;
-        font-size: 14px;
-        opacity: 1; }
+        opacity: 1;
+        font-size: 14px; }
     .custom__form__label {
       position: absolute;
       left: 0;

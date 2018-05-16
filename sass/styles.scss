@@ -60,46 +60,20 @@ a {
   position: relative;
   @media screen and (max-width: $mobile) {
     width: $mobile;
+    // text-align: -webkit-center; 
+    // padding-left: 
     // flex-direction: column;
   }
-  &__icon {
-    display: none;
-    @media screen and (max-width: $mobile) {
-      display: block;
-      // border: 4px solid #4fbad3;
-    }
-    &__bar {
-    }
-  }
-  // &__icon {
-  //   display: none;
-  //   @media screen and (max-width: $mobile) {
-  //     display: block;
-  //     // border: 4px solid #4fbad3;
-  //     border-radius: 10px;
-  //   }
-  //   &:before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 36px;
-  //     left: 32px;
-  //     width: 27px;
-  //     height: 5px;
-  //     border-top: 13px double #4fbad3;
-  //     border-bottom: 4px solid #4fbad3;
-  //     &:before:hover {
-  //       cursor: pointer;
-  //     }
-  //   }
-  // }
   &__logo {
     padding: 39px 0;
     line-height: 10px;
-    flex-basis: 510px;
+    width: 510px;
     position: relative;
 
     @media screen and (max-width: $mobile) {
-      padding: 16px 0 19px 155px;
+      padding: 16px 0 19px;
+      width: 640px;
+
     } 
     &__link {
       display: block;
@@ -114,12 +88,14 @@ a {
         display: none;
         @media screen and (max-width: $mobile) {
           display: block;
+          margin: auto;
         } 
       }
       &:hover {
         opacity: 0.7;
       }
     }
+
   }
   &__search {
     position: relative;
@@ -152,18 +128,58 @@ a {
       }
     }
   }
+  &__span {
+      display: none;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 35px;
+      color: #4fbad3;
+      cursor: pointer;
+      @media screen and (max-width: $mobile) {
+        display: block;
+
+      }
+    }
   &__user {
     // remove default whitespace between inline-block
     font-size: 0;
     margin: 30px 0;
     @media screen and (max-width: $mobile) {
+      height: 50%;
+      width: 0;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      background: #e4f8fd;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 50px;
+      margin: 0;
+    }
+    &__span {
+      position: absolute;
+      top: 0;
+      right: 12px;
+      // margin-left: 100px;
+      font-size: 40px;
       display: none;
+      @media screen and (max-width: $mobile) {
+       display: block; 
+      }
+      &:hover {
+        background: red;
+      }
     }
     &__item {
-    width: 180px;
-    display: inline-block;
-    margin-left: 9px;
-    transition: all 0.3s;
+      width: 180px;
+      display: inline-block;
+      margin-left: 9px;
+      transition: all 0.3s;
+      @media screen and (max-width: $mobile) {
+        margin: 5px 5px 0 20px;
+      }
     }
     &__link {
       border-bottom: 2px solid;
@@ -173,9 +189,19 @@ a {
       display: block;
       font-size: 16px;
       text-align: center;
+      @media screen and (max-width: $mobile) {
+        border-bottom: 0;
+        color: #000;
+        padding: 5px 0;
+        text-align: -webkit-left;
+        font-size: 20px;
+      }
     }
     &__register {
       background-color: #5082d4;
+      @media screen and (max-width: $mobile) {
+        background-color: #e4f8fd;
+      }
       &:hover {
         opacity: 0.7;
       }
@@ -183,6 +209,9 @@ a {
     &__login {
       background-color: #d63232;
       margin-right: 0;
+      @media screen and (max-width: $mobile) {
+        background-color: #e4f8fd;
+      }
       &:hover {
         opacity: 0.7;
       }
@@ -738,9 +767,7 @@ a {
       justify-content: space-around;
       list-style: none;
       padding: 20px 20px 30px;
-
       border-bottom: 1px solid #eeeeee;
-
       @media screen and (max-width: $mobile) {
         justify-content: center;
       }
@@ -750,6 +777,7 @@ a {
         padding: 10px 30px;
         width: 185px;
         text-align: center;
+        cursor: pointer;
         @media screen and (max-width: $mobile) {
           width: 30px;
           border-radius: 4px;
@@ -794,7 +822,6 @@ a {
         font-weight: 400;
         @media screen and (max-width: $mobile) {
           font-weight: 600;
-          
         }
       }
       &__form {
@@ -824,9 +851,14 @@ a {
           background-color: #4fbad3;
           color: #fff;
           border: 1px solid #ccc;
+          cursor: pointer;
           // box-shadow: 0 2px 0 #d7cdd3;
           @media screen and (max-width: $mobile) {
             font-size: 20px;
+          }
+          &:hover {
+            opacity: 0.7;
+            transition: 0.3s;
           }
         }
       }
@@ -879,11 +911,14 @@ a {
       }
       &:focus {
         outline: 0;
-        & + .custom__form__label {
-          font-size: 14px;
-          // color: #85A8E1;
+        &::placeholder {
           opacity: 1;
+          color: #ccc;
+        }
+        & + .custom__form__label {
           bottom: 30px;
+          opacity: 1;
+          font-size: 14px;
           &:after {
             visibility: visible;
             width: 100%;
@@ -891,17 +926,12 @@ a {
             bottom: -30px;
           }
         }
-        &::placeholder {
-          opacity: 1;
-          color: #ccc;
-        }
       }
       &:valid + .custom__form__label {
         bottom: 30px;
-        font-size: 14px;
         opacity: 1;
+        font-size: 14px;
       }
-      
     }
     &__label {
       position: absolute;
@@ -913,7 +943,6 @@ a {
       transition: all 0.2s;
       width: 100%;
       font-weight: 600;
-      
       &::after {
         content: "";
         position: absolute;
